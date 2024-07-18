@@ -10,6 +10,7 @@ class Recipe(ConanFile):
 
     def requirements(self):
         self.requires("fmt/10.2.1")
+        self.requires("edgerunner/0.1.0")
 
     def build_requirements(self):
         self.test_requires("catch2/3.6.0")
