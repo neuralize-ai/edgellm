@@ -36,6 +36,7 @@ class Recipe(ConanFile):
 
         self.options["edgerunner"].with_gpu = self.options.with_gpu
         self.options["edgerunner"].with_npu = self.options.with_npu
+        self.options["edgerunner"].with_tflite = False
 
     def build_requirements(self):
         self.test_requires("catch2/3.6.0")
