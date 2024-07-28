@@ -24,7 +24,7 @@ class Recipe(ConanFile):
 
     def requirements(self):
         self.requires("fmt/10.2.1")
-        self.requires("edgerunner/0.1.0")
+        self.requires("edgerunner/0.1.1")
 
     def config_options(self):
         if self.settings.os == "Windows":
