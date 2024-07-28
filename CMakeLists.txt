@@ -59,7 +59,7 @@ find_package(fmt REQUIRED)
 target_link_libraries(edgellm_edgellm PRIVATE fmt::fmt)
 
 find_package(edgerunner REQUIRED)
-target_link_libraries(edgellm_edgellm PRIVATE edgerunner::edgerunner)
+target_link_libraries(edgellm_edgellm PUBLIC edgerunner::edgerunner)
 
 # ---- Install rules ----
 
