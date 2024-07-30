@@ -59,10 +59,10 @@ IMAGES_DIR="${ROOT_DIR}/images"
 APP_ROOT_DIR="/data/local/tmp/edgellm"
 APP_BUILD_DIR="${APP_ROOT_DIR}/build"
 
-adb push --sync "${BUILD_DIR}" "${APP_BUILD_DIR}"
-adb push --sync "${MODELS_DIR}" "${APP_BUILD_DIR}/models"
-adb push --sync "${IMAGES_DIR}" "${APP_BUILD_DIR}/images"
+adb push --sync "${BUILD_DIR}/." "${APP_BUILD_DIR}"
+adb push --sync "${MODELS_DIR}/." "${APP_BUILD_DIR}/models"
+adb push --sync "${IMAGES_DIR}/." "${APP_BUILD_DIR}/images"
 
 adb shell "cd ${APP_BUILD_DIR} && LD_LIBRARY_PATH=. ADSP_LIBRARY_PATH=. ./${EXE}"
 
-adb shell "rm -rf ${APP_ROOT_DIR}"
+# adb shell "rm -rf ${APP_ROOT_DIR}"
