@@ -15,7 +15,9 @@ include(cmake/variables.cmake)
 
 # ---- Declare library ----
 
-add_library(edgellm_edgellm source/edgellm.cpp source/tokenizer.cpp)
+add_library(
+    edgellm_edgellm source/edgellm.cpp source/tokenizer.cpp source/sampler.cpp
+)
 add_library(edgellm::edgellm ALIAS edgellm_edgellm)
 
 include(GenerateExportHeader)
