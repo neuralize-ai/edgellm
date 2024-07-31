@@ -36,9 +36,9 @@ endif()
 
 # ---- Tests ----
 
-add_executable(edgellm_test source/edgellm_test.cpp)
+add_executable(edgellm_test source/edgellm_test.cpp source/tokenizer_test.cpp)
 target_link_libraries(
-    edgellm_test PRIVATE edgellm::edgellm Catch2::Catch2WithMain
+    edgellm_test PRIVATE edgellm::edgellm fmt::fmt Catch2::Catch2WithMain
 )
 target_compile_features(edgellm_test PRIVATE cxx_std_17)
 
