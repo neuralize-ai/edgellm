@@ -21,6 +21,8 @@ class EDGELLM_EXPORT EdgeLLM {
 
     auto getCreationStatus() const -> bool { return m_creationSuccess; }
 
+    auto generate(const std::string& prompt) -> std::vector<std::string>;
+
   private:
     std::vector<std::filesystem::path> m_promptProcessorPaths;
     std::vector<std::filesystem::path> m_tokenGeneratorPaths;
