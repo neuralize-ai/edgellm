@@ -7,6 +7,7 @@
 #include <edgerunner/model.hpp>
 
 #include "edgellm/edgellm_export.hpp"
+#include "edgellm/ropeEmbedding.hpp"
 #include "edgellm/sampler.hpp"
 #include "edgellm/tokenizer.hpp"
 
@@ -45,6 +46,8 @@ class EDGELLM_EXPORT EdgeLLM {
     static constexpr int32_t MNEos = 1;
 
     Sampler m_sampler;
+
+    RopeEmbedding m_ropeEmbedding;
 };
 
 }  // namespace edgellm
